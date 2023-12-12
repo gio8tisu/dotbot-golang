@@ -66,7 +66,7 @@ class Go(dotbot.Plugin):
 
             flags = data.get('flags', [])
 
-            cmd = [self._go_exec, 'get'] + flags + [package]
+            cmd = [self._go_exec, 'install'] + flags + [package]
             self._log.warning('Running command: %s' % ' '.join(cmd))
             ret = subprocess.call(
                 cmd,
